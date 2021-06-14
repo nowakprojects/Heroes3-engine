@@ -1,10 +1,7 @@
 cmake_minimum_required(VERSION 3.19)
 project(BattlefieldH3)
 
-set(CMAKE_CXX_STANDARD 14)
-
-#find_package(SFML COMPONENTS system window graphics CONFIG REQUIRED)
-#target_link_libraries(main PRIVATE sfml-system sfml-network sfml-graphics sfml-window)
+set(CMAKE_CXX_STANDARD 20)
 
 include_directories(.)
 include_directories(Fonts)
@@ -72,3 +69,6 @@ add_executable(BattlefieldH3
         startMap.txt
         WindowObject.cpp
         WindowObject.h)
+
+find_package(SFML COMPONENTS system window graphics CONFIG REQUIRED)
+target_link_libraries(BattlefieldH3 PRIVATE sfml-system sfml-network sfml-graphics sfml-window)

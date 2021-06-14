@@ -1,4 +1,6 @@
 #include "GuiHandler.h"
+#include <cmath>
+
 void BattleUnit::initAnimation()
 {
 	this->animation =

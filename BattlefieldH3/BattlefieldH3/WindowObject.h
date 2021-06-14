@@ -34,9 +34,9 @@ public:
 	std::shared_ptr<WindowObject> iner;
 
 	template <typename T, typename ... Args>
-	void setWindow(Args && ... args)
+	void setWindow(Args && ...args)
 	{
-		iner = std::make_shared<T>(args);
+		iner = std::make_shared<T>(std::forward<Args>(args)...);
 	}
 
 	bool contains(sf::Vector2f mousePos) override { return true; }
