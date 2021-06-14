@@ -1,4 +1,5 @@
 #include "GuiHandler.h"
+#include <cmath>
 
 BattleHandler::BattleHandler()
 {
