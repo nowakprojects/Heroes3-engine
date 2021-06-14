@@ -38,10 +38,8 @@ jobs:
     - name: Install dependencies
       shell: bash
       run: |
-        cd..
-        cd..
-        ./vcpkg/vcpkg install sfml
-        ./vcpkg/vcpkg integrate install
+        $VCPKG_ROOT/vcpkg install sfml
+        $VCPKG_ROOT/vcpkg integrate install
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
