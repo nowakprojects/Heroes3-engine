@@ -33,6 +33,12 @@ jobs:
       uses: lukka/run-vcpkg@v6
       with:
         setupOnly: true
+        
+      # Now that vcpkg is installed, it is being used to run with the desired arguments.
+    - name: Install dependencies
+      shell: bash
+      run: |
+        $VCPKG_ROOT/vcpkg install sfml
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
