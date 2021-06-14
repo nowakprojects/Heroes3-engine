@@ -30,10 +30,7 @@ jobs:
       run: |
         git clone https://github.com/Microsoft/vcpkg.git
         cd vcpkg 
-        cp ninja-linux-1.8.2.zip /usr/local/vcpkg/downloads
-        cp cmake-3.14.0-Linux-x86_64.tar.gz /usr/local/vcpkg/downloads
         ./bootstrap-vcpkg.sh
-        chown -R hduser:hduser /usr/local/vcpkg
         vcpkg install sfml
         vcpkg integrate install
 
