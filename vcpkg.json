@@ -1,0 +1,7 @@
+{
+  "name": "battlefield-h3",
+  "version-string": "1.0.0",
+  "dependencies": [
+    "sfml"
+  ]
+}
