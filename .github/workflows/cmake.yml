@@ -39,7 +39,7 @@ jobs:
         setupOnly: true
     # Now that vcpkg is installed, it is being used to run with the desired arguments.
     - name: Install SFML
-    - shell: bash
+      shell: bash
       run: |
         $VCPKG_ROOT/vcpkg install sfml
         $VCPKG_ROOT/vcpkg integrate install
